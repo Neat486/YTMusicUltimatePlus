@@ -99,7 +99,9 @@ jobs:
         id: build_package
         run: |
           cd ${{ github.workspace }}/main
-          make clean package SIDELOADING=1 ADDITIONAL_OBJCXXFLAGS="-Wno-error=vla-cxx-extension"
+          make clean package SIDELOADING=1 WERROR=0 \
+            ADDITIONAL_OBJCXXFLAGS="-Wno-vla-cxx-extension -Wno-error=vla-cxx-extension" \
+            ADDITIONAL_CFLAGS="-Wno-vla -Wno-error=vla"
         env:
           THEOS: ${{ github.workspace }}/theos
 
