@@ -1,0 +1,121 @@
+"SETTINGS" = "การตั้งค่า";
+"ENABLED" = "เปิดใข้งาน YTMusicUltimate";
+"ENABLED_DESC" = "ฟีเจอร์พรีเมียม,ไม่มีโฆษณา,การเล่นในพื้นหลัง ฯลฯ";
+"RESTART_FOOTER" = "ต้องรีสตาร์ทแอพเพื่อปรับใช้";
+
+"PREMIUM_SETTINGS" = "การตั้งค่าพรีเมียม";
+"NO_ADS" = "ไม่มีโฆษณา";
+"NO_ADS_DESC" = "นำโฆษณาออกจากแอพ";
+"BACKGROUND_PLAYBACK" = "การเล่นในพื้นหลัง";
+"BACKGROUND_PLAYBACK_DESC" = "เปิดใช้งานการเล่นในพื้นหลัง";
+"FORCE_PREMIUM" = "บังคับเปิดใช้งานพรีเมียม";
+"FORCE_PREMIUM_DESC" = "บังคับเปิดใช้งานพรีเมียม\nตัวเลือกนี้จะปิดการใช้งานแท็บลองฟังไปด้วย";
+
+"PLAYER_SETTINGS" = "ตัวเลือกเครื่องเล่น";
+"DOWNLOAD_AUDIO" = "ดาวน์โหลดเสียง";
+"DOWNLOAD_AUDIO_DESC" = "เพิ่มตัวเลือกการดาวน์โหลดเสียงโดยกดปุ่ม YTMusicUltimate ในเครื่องเล่น";
+"DOWNLOAD_COVER" = "ดาวน์โหลดปกเพลง";
+"DOWNLOAD_COVER_DESC" = "เพิ่มตัวเลือกการดาวน์โหลดปกเพลงโดยกดปุ่ม YTMusicUltimate ในเครื่องเล่น";
+"PLAYBACK_RATE_BUTTON" = "แสดงความเร็วการเล่นเพลง";
+"PLAYBACK_RATE_BUTTON_DESC" = "ปรับเปลี่ยนความเร็วการเล่นเพลง";
+"SELECTABLE_LYRICS" = "เลือกข้อความจากเนื้อเพลง";
+"SELECTABLE_LYRICS_DESC" = "เปิดใช้งานการเลือกข้อความจากเนื้อเพลง";
+"VOLBAR" = "แถบเสียง";
+"VOLBAR_DESC" = "เพิ่มแถบเสียงไปในเครื่องเล่น";
+"NO_AUTORADIO" = ปิดใช้งานวิทยุ";
+"NO_AUTORADIO_DESC" = "ปิดใช้งานฟีเจอร์การเล่นเพลงต่อๆไป";
+"SKIP_CONTENT_WARNING" = "ข้ามคำเตือนเนื้อหา";
+"SKIP_CONTENT_WARNING_DESC" = "ข้ามคำเตือนเนื้อหาที่มีความรุนแรง";
+"AV_DEFAULT_MODE" = "โหมดการเล่นเพลงเริ่มต้น";
+"AUDIO" = "เสียง";
+"VIDEO" = "วิดีโอ";
+
+"SKIP_NONMUSIC_PARTS" = "SponsorBlock";
+"SKIP_NONMUSIC_PARTS_DESC" = "ข้ามส่วนที่ไม่ใช่เพลงในมิวสิกวิดีโอ";
+"SB_BEHAVIOR" = "พฤติกรรม";
+"SB_SKIP" = "ข้าม";
+"SB_ASK" = "ถาม";
+"SB_NOTIF_DURATION" = "ระยะเวลาการแจ้งเตือน (วินาที)";
+
+"SEEK_BUTTONS" = "เปลี่ยนปุ่มถัดไป/ก่อนหน้าด้วยปุ่มไปข้างหน้า/ถอยหลัง";
+"SEEK_TIME_FOOTER" = "เลือกเวลาเลื่อนเป็นวินาที\n\nค่าเริ่มต้น:\nเลื่อนถอยหลัง 10 วินาที\nเลื่อนไปข้างหน้า 30 วินาที\n\nข้ามไปเพลงถัดไปและก่อนหน้าโดยแตะปุ่มค้างไว้";
+"DEFAULT" = "ค่าเริ่มต้น";
+
+"THEME_SETTINGS" = "ตัวเลือกธีม";
+"OLED_DARK_THEME" = "ธีมมืด OLED";
+"OLED_DARK_THEME_DESC" = "เปิดใช้งานธีมมืด OLED";
+"OLED_DARK_KEYBOARD" = "คีย์บอร์ดมืด OLED";
+"OLED_DARK_KEYBOARD_DESC" = "เปิดใช้งานคีย์บอร์ดมืด OLED";
+"LOW_CONTRAST" = "คอนทราสต์ต่ํา";
+"LOW_CONTRAST_DESC" = "คอนทราสต์ต่ําสําหรับข้อความและปุ่ม";
+
+"NAVBAR_SETTINGS" = "ตัวเลือกแถบนำทาง";
+"DONT_STICK_HEADERS" = "ไม่ล็อกโลโก้ Youtube Music";
+"DONT_STICK_HEADERS_DESC" = "เอาล็อกโลโก้ออกที่ด้านบนของหน้าจอ";
+"HIDE_HISTORY_BUTTON" = "ซ่อนปุ่มประวัติ";
+"HIDE_HISTORY_BUTTON_DESC" = "ซ่อนปุ่มประวัติในแถบนำทาง";
+"HIDE_CAST_BUTTON" = "ซ่อนปุ่มแคสต์";
+"HIDE_CAST_BUTTON_DESC" = "ซ่อนปุ่มแคสต์ในแถบนำทาง";
+"HIDE_FILTER_BUTTON" = "เอาปุ่มตัวกรองออก";
+"HIDE_FILTER_BUTTON_DESC" = "เอาปุ่มตัวกรองออกจากคลังเพลงในแถบนำทาง";
+
+"TABBAR_SETTINGS" = "ตัวเลือกแท็บบาร์";
+"STARTUP_TAB" = "แท็บเริ่มต้นตอนเปิดแอพ";
+"HOME" = "หน้าหลัก";
+"SAMPLES" = "ลองฟัง";
+"EXPLORE" = "สำรวจ";
+"LIBRARY" = "คลังเพลง";
+"DOWNLOADS" = "ดาวน์โหลด";
+
+"TAB_SETTINGS" = "การตั้งค่าแท็บ";
+"REMOVE_TABBAR_LABELS" = "ซ่อนชื่อของแท็บนั้นๆ (หน้าแรก,ลองฟัง ฯลฯ)";
+"HIDE_HOME" = "ซ่อนแท็บหน้าหลัก";
+"HIDE_SAMPLES" = "ซ่อนแท็บลองฟัง";
+"HIDE_EXPLORE" = "ซ่อนแท็บสำรวจ";
+"HIDE_LIBRARY" = "ซ่อนแท็บคลังเพลง";
+"HIDE_DOWNLOADS" = "ซ่อนแท็บดาวน์โหลด";
+
+"CLEAR_CACHE" = "ล้างแคช";
+
+"APPLY" = "ปรับใช้";
+"APPLY_DESC" = "ปิดแอพเพื่อปรับใช้";
+
+"LINKS" = "ลิงค์";
+"TWITTER" = "ติดตาม %@ ใน X";
+"TWITTER_DESC" = "ติดตามผมสำหรับอัพเดทใหม่";
+"DISCORD" = "เข้าร่วมดิสคอร์ด";
+"DISCORD_DESC" = "แจ้งปัญหาและเสนอฟีเจอร์ใหม่";
+"SOURCE_CODE" = "ซอสต์โค้ด";
+"SOURCE_CODE_DESC" = "ลองเข้าไปดูโค้ดสิ";
+
+"CLOSE" = "ปิด";
+"WARNING" = "คำเตือน";
+"LOGIN_INFO" = "ต้องรีสตาร์ทแอพหลังจากล็อกอินบัญชี Google";
+"RETRY_LOGIN" = "เปิดใช้งานเพื่อแก้ปัญหาแล้ว\n\nกรุณาลองอีกครั้ง";
+"APPLY_MESSAGE" = "การกระทำนี้ต้องรีสตาร์ท Youtube Music เพื่อปรับใช้ คุณแน่ใจไหม?";
+"CANCEL" = "ยกเลิก";
+"YES" = "ใช่";
+"REGIONAL_RESTRICTION" = "ดูเหมือนว่าจะไม่สามารถเข้าถึง Youtube Music ได้ในประเทศของคุณ\n\n กรุณาใช้ VPN เพื่อเข้าถึง Youtube Music";
+
+"DONT_RUSH" = "ไม่เร่งรีบ";
+"DONT_RUSH_DESC" = "จำเป็นต้องเล่นเพลงเพื่อแตกลิงค์";
+"SELECT_ACTION" = "เลือกการกระทำ";
+"DOWNLOAD_PREMIUM" = "ดาวน์โหลด (ต้องมีพรีเมียม)";
+"DOWNLOADING" = "กำลังดาวน์โหลด";
+"OOPS" = "โอ๊ะ!\nมีบางอย่างผิดพลาด";
+"LINK_NOT_FOUND" = "ไม่พบลิงค์";
+"SAVED_TO_PHOTOS" = "บันทึกไปยังคลังรูปภาพแล้ว";
+"DONE" = "เสร็จ";
+"FOUND_SEGMENT" = "เจอช่วงที่ออกนอกหัวข้อ";
+"SEGMENT_SKIPPED" = "ข้ามช่วงที่ออกนอกหัวข้อแล้ว";
+"SKIP" = "ข้าม";
+"UNSKIP" = "ไม่ข้าม";
+
+"EMPTY" = "คอนเทนต์ที่คุณดาวน์โหลดจะปรากฏขึ้นที่นี่";
+"REMOVE_ALL" = "ลบเสียงทั้งหมด";
+"SHARE_ALL" = "แชร์เสียงทั้งหมด";
+"PREPARING" = "กำลังเตรียม...";
+"DELETE_MESSAGE" = "คุณแน่ใจว่าต้องการลบ%@?";
+"ALL_DOWNLOADS" = "เสียงที่ดาวน์โหลดทั้งหมด"; //keep it lowercase
+"DELETE" = "ลบ";
+"RENAME" = "เปลี่ยนชื่อ";
