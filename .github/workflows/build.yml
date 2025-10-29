@@ -131,7 +131,7 @@ jobs:
 
       - name: Build NoYTMPremium
         run: |
-          cd ${{ github.workspace }}/NoYTMPremium
+          cd NoYTMPremium
           make clean package DEBUG=0 FINALPACKAGE=1
           mv packages/*.deb ${{ github.workspace }}/noytmpremium.deb
         env:
@@ -139,7 +139,7 @@ jobs:
 
       - name: Build YTMABConfig
         run: |
-          cd ${{ github.workspace }}/YTMABConfig
+          cd YTMABConfig
           make clean package DEBUG=0 FINALPACKAGE=1
           mv packages/*.deb ${{ github.workspace }}/ytmab.deb
         env:
