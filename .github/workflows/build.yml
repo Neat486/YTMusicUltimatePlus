@@ -109,6 +109,13 @@ jobs:
       - name: Download YTMusicUltimate .deb
         run: wget "https://github.com/dayanch96/YTMusicUltimate/releases/download/v${{ inputs.ytmusicult_version }}/com.ginsu.ytmusicultimate_${{ inputs.ytmusicult_version }}_iphoneos-arm64.deb" --no-verbose -O ${{ github.workspace }}/ytmusicult.deb
 
+      - name: Clone YouTubeHeader
+        run: |
+          cd $THEOS/include
+          git clone --quiet https://github.com/PoomSmart/YouTubeHeader.git
+        env:
+          THEOS: ${{ github.workspace }}/theos
+
       - name: Clone NoYTMPremium
         run: git clone --quiet https://github.com/PoomSmart/NoYTMPremium.git
 
