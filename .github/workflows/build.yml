@@ -1,4 +1,4 @@
-name: Build YTMusicUltimate IPA
+name: Build YTMusicUltimatePlus IPA
 on:
   workflow_dispatch:
     inputs: 
@@ -50,7 +50,7 @@ concurrency:
 
 jobs:
   build:
-    name: Build YTMusicUltimate
+    name: Build YTMusicUltimatePlus IPA
     runs-on: macos-latest
     permissions:
       contents: write
@@ -142,12 +142,12 @@ jobs:
             fi
           done
 
-          cyan -i ytm.ipa -o YTMusicUltimate_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}.ipa -uwef $tweaks -n "${{ inputs.display_name }}" -b ${{ inputs.bundle_id }} 
+          cyan -i ytm.ipa -o YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}.ipa -uwef $tweaks -n "${{ inputs.display_name }}" -b ${{ inputs.bundle_id }} 
 
       - name: Upload IPA to Catbox
         if: ${{ inputs.catbox_upload }}
         run: |
-          RESPONSE=$(curl -F "reqtype=fileupload" -F "fileToUpload=@${{ github.workspace }}/YTMusicUltimate_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}.ipa" https://catbox.moe/user/api.php)
+          RESPONSE=$(curl -F "reqtype=fileupload" -F "fileToUpload=@${{ github.workspace }}/YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}.ipa" https://catbox.moe/user/api.php)
           CATBOX_URL=$(echo $RESPONSE | grep -o -E 'https://files.catbox.moe/[^"]*')
           echo "Uploaded artifact to $CATBOX_URL"
           CATBOX_FILE=$(echo $CATBOX_URL | sed 's|https://files.catbox.moe/||')
@@ -158,21 +158,21 @@ jobs:
         if: ${{ inputs.upload_artifact }}
         uses: actions/upload-artifact@v4.6.2
         with:
-          name: YTMusicUltimate_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}
-          path: ${{ github.workspace }}/YTMusicUltimate_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}.ipa
+          name: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}
+          path: ${{ github.workspace }}/YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}.ipa
 
       - name: Create a Draft Release
         if: ${{ inputs.draft_release }}
         uses: softprops/action-gh-release@v2.3.3
         with:
-          tag_name: ytmult-ipa${{ github.run_number }}
-          name: YTMusicUltimate_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }} (${{ github.run_number }}) 
-          files: YTMusicUltimate_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}.ipa
+          tag_name: ytmultplus-ipa${{ github.run_number }}
+          name: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }} (${{ github.run_number }}) 
+          files: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}.ipa
           draft: true
 
       - name: Job Summary - Build Conplete
         run: |
-          echo -e '### 🛠️ Build YTMusicUltimate IPA Complete!' >> $GITHUB_STEP_SUMMARY
+          echo -e '### 🛠️ Build YTMusicUltimatePlus IPA Complete!' >> $GITHUB_STEP_SUMMARY
 
       - name: Job Summary - Output the Artifact Upload
         if: ${{ inputs.upload_artifact }}
