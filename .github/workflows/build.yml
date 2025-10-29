@@ -64,8 +64,8 @@ jobs:
 
       - name: Hide sensitive inputs
         uses: levibostian/action-hide-sensitive-inputs@v1
-         with:
-          exclude_inputs: bundle_id,display_name,ytmusicult_version,draft_release,upload_artifact,catbox_upload
+        with:
+           exclude_inputs: bundle_id,display_name,ytmusicult_version,draft_release,upload_artifact,catbox_upload
 
       - name: Download and Validate IPA
         run: |
@@ -91,7 +91,7 @@ jobs:
         run: echo "$(brew --prefix make)/libexec/gnubin" >> $GITHUB_PATH
 
       - name: Clone Theos
-         run: git clone --quiet --recurse-submodules https://github.com/theos/theos.git
+        run: git clone --quiet --recurse-submodules https://github.com/theos/theos.git
 
       - name: Download iOS SDK
         run: |
@@ -130,7 +130,6 @@ jobs:
           mv packages/*.deb ${{ github.workspace }}/ytmab.deb
         env:
           THEOS: ${{ github.workspace }}/theos
-
 
       - name: Inject Tweaks Into IPA
         run: |
