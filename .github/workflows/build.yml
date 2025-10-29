@@ -62,14 +62,14 @@ jobs:
           echo "No IPA output way selected. Please choose at least one."
           exit 1
 
-      - name: Hide sensitive inputs
+      - name: Hide Sensitive Inputs
         uses: levibostian/action-hide-sensitive-inputs@v1
         with:
            exclude_inputs: bundle_id,display_name,ytmusicult_version,draft_release,upload_artifact,catbox_upload
 
       - name: Download and Validate IPA
         run: |
-          wget "${{ inputs.ipa_url }}" --no-verbose -O ${{ github.workspace }}/ytm.ipa
+          wget ${{ inputs.ipa_url }} --no-verbose -O ${{ github.workspace }}/ytm.ipa
 
           file_type=$(file --mime-type -b ${{ github.workspace }}/ytm.ipa)
 
@@ -172,7 +172,7 @@ jobs:
         uses: actions/upload-artifact@v4.6.2
         with:
           name: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}
-          path: ${{ github.workspace }}/YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}.ipa
+          path: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ inputs.ytmusicult_version }}.ipa
 
       - name: Create a Draft Release
         if: ${{ inputs.draft_release }}
