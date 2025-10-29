@@ -8,7 +8,6 @@ body:
       description: Describe the issue in detail here, including any relevant context or background information. Be clear and concise.
       placeholder: |
         Enter your description here
-      render: yaml
     validations:
       required: true
 
@@ -22,7 +21,6 @@ body:
         1. Go to Main tab
         2. Tap to the music
         3. See error
-      render: yaml
     validations:
       required: true
 
@@ -49,15 +47,12 @@ body:
       description: |
         **IMPORTANT:** Read carefully before checking the box.
       options:
-        - label: I have checked that a similar issue has not been reported before.
+        - label: I have **CHECKED** that a similar issue has not been reported before.
           required: true
         - label: Verified the relevance of the project and the version you are using.
           required: true
         - label: Provided a detailed description of the problem and have filled in all required fields.
           required: true
-        - label: I have read the 'IPA Building Troubleshooting' section (Only for issues related to building the IPA file).
-          required: false
-        - label: I did not answer truthfully to **ALL** the above checkboxes.
-          required: false
         - label: By submitting this issue, **I confirm that I have filled in all the necessary fields and complied with the guidelines. Failure to comply may result in the issue being closed without discussion, and repeated violations may lead to restrict account from further participation.**
           required: true
+
