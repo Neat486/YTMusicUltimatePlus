@@ -3,7 +3,7 @@ The best tweak for the YouTube Music on iOS.
 
 ## How to build a YTMusicUltimatePlus IPA using Github Actions
 
-If this is your first time here, start from step 1. If you built a YTMU+ IPA before, skip steps 1 and 2. Instead, click on the "Sync fork" button to get the latest version of the tweak and continue through step 3.
+If this is your first time here, start from step 1. If you built a YTMusicUltimate IPA before, skip steps 1 and 2. Instead, click on the "Sync fork" button to get the latest version of the tweak and continue through step 3.
 
 1. Fork this repository using the fork button on the top right.
 2. On your forked repository, go to Repository Settings > Actions, enable Read and Write permissions.
