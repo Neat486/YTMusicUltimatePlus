@@ -107,7 +107,7 @@ jobs:
         run: pipx install --force https://github.com/asdfzxcvbn/pyzule-rw/archive/main.zip
 
       - name: Download YTMusicUltimate .deb
-        run: wget https://github.com/dayanch96/YTMusicUltimate/releases/download/v${{ inputs.ytmusicult_version }}/com.ginsu.ytmusicultimate_${{ inputs.ytmusicult_version }}_iphoneos-arm64.deb --no-verbose -O ${{ github.workspace }}/ytmusicult.deb
+        run: wget https://github.com/dayanch96/YTMusicUltimate/releases/download/v${{ inputs.ytmusicult_version }}/com.ginsu.ytmusicultimate_${{ inputs.ytmusicult_version }}_iphoneos-arm.deb --no-verbose -O ${{ github.workspace }}/ytmusicult.deb
 
       - name: Clone YouTubeHeader
         run: |
