@@ -133,7 +133,7 @@ jobs:
         run: |
           cd ${{ github.workspace }}/NoYTMPremium
           make clean package DEBUG=0 FINALPACKAGE=1
-          mv packages/*.deb ${{ github.workspace }}/notympremium.deb
+          mv packages/*.deb ${{ github.workspace }}/noytmpremium.deb
         env:
           THEOS: ${{ github.workspace }}/theos    
 
