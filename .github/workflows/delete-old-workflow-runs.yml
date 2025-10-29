@@ -1,4 +1,4 @@
-name: Delete old workflows run
+name: Delete old workflow runs
 on:
   workflow_dispatch:
     inputs:
@@ -44,13 +44,13 @@ on:
 
 jobs:
   build:
-    name: Delete old workflows run
+    name: Delete old workflow runs
     runs-on: ubuntu-latest
     permissions:
       actions: write
       contents: read
     steps:
-      - name: Delete old workflows run
+      - name: Delete old workflow runs
         uses: Mattraks/delete-workflow-runs@v2.0.6
         with:
           token: ${{ github.token }}
