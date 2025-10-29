@@ -116,6 +116,13 @@ jobs:
         env:
           THEOS: ${{ github.workspace }}/theos
 
+      - name: Clone YouTubeMusicHeader
+        run: |
+          cd $THEOS/include
+          git clone --quiet https://github.com/PoomSmart/YouTubeMusicHeader.git
+        env:
+          THEOS: ${{ github.workspace }}/theos
+
       - name: Clone NoYTMPremium
         run: git clone --quiet https://github.com/PoomSmart/NoYTMPremium.git
 
