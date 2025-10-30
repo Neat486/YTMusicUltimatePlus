@@ -2,11 +2,11 @@ name: Delete old draft releases
 on:
   workflow_dispatch:
         inputs:
-         time:
-         description: "Set a certain amount of time you want to keep"
-         default: ""
-         required: false
-         type: string  
+           time:
+             description: "Set a certain amount of time you want to keep"
+             default: ""
+             required: false
+             type: string  
 
 permissions:
   contents: write
