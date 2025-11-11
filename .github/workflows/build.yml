@@ -106,7 +106,7 @@ jobs:
       - name: Get YTMusicUltimate Version
         run: |
           cd YTMusicUltimate
-          VERSION=$(grep '^Version:' control | cut -d ' ' -f2)
+          VERSION=$(grep '^PACKAGE_VERSION =' control | cut -d ' ' -f2)
           echo "YTMUSICULT_VERSION=$VERSION" >> $GITHUB_ENV
           echo -e 'Done!'
 
