@@ -103,6 +103,13 @@ jobs:
       - name: Clone YTMusicUltimate 
         run: git clone --quiet https://github.com/dayanch96/YTMusicUltimate.git
 
+      - name: Get YTMusicUltimate Version
+        run: |
+          cd YTMusicUltimate
+          VERSION=$(grep '^Version:' control | cut -d ' ' -f2)
+          echo "YTMUSICULT_VERSION=$VERSION" >> $GITHUB_ENV
+          echo -e 'Done!'
+
       - name: Clone YouTubeHeader
         run: |
           cd $THEOS/include
@@ -159,12 +166,12 @@ jobs:
             fi
           done
 
-          cyan -i ytm.ipa -o YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v2.3.1.ipa -uwef $tweaks -n "${{ inputs.display_name }}" -b ${{ inputs.bundle_id }} 
+          cyan -i ytm.ipa -o YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ env.YTMUSICULT_VERSION }}.ipa -uwef $tweaks -n "${{ inputs.display_name }}" -b ${{ inputs.bundle_id }} 
 
       - name: Upload IPA to Catbox
         if: ${{ inputs.catbox_upload }}
         run: |
-          RESPONSE=$(curl -F "reqtype=fileupload" -F "fileToUpload=@YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v2.3.1.ipa" https://catbox.moe/user/api.php)
+          RESPONSE=$(curl -F "reqtype=fileupload" -F "fileToUpload=@YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ env.YTMUSICULT_VERSION }}.ipa" https://catbox.moe/user/api.php)
           CATBOX_URL=$(echo $RESPONSE | grep -o -E 'https://files.catbox.moe/[^"]*')
           echo "Uploaded artifact to $CATBOX_URL"
           CATBOX_FILE=$(echo $CATBOX_URL | sed 's|https://files.catbox.moe/||')
@@ -175,16 +182,16 @@ jobs:
         if: ${{ inputs.upload_artifact }}
         uses: actions/upload-artifact@v5
         with:
-          name: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v2.3.1
-          path: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v2.3.1.ipa
+          name: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ env.YTMUSICULT_VERSION }}
+          path: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ env.YTMUSICULT_VERSION }}.ipa
 
       - name: Create a Draft Release
         if: ${{ inputs.draft_release }}
         uses: softprops/action-gh-release@v2.4.2
         with:
           tag_name: ytmultplus-ipa${{ github.run_number }}
-          name: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v2.3.1 (${{ github.run_number }}) 
-          files: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v2.3.1.ipa
+          name: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ env.YTMUSICULT_VERSION }} (${{ github.run_number }}) 
+          files: YTMusicUltimatePlus_${{ env.YTM_VERSION }}_v${{ env.YTMUSICULT_VERSION }}.ipa
           draft: true
 
       - name: Job Summary - Build Conplete
