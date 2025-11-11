@@ -126,6 +126,7 @@ jobs:
       - name: Build YTMusicUltimate
         run: |
           cd YTMusicUltimate
+          sed -i '' -e 's/16.5/latest/g' Makefile
           make clean package DEBUG=0 FINALPACKAGE=1
           mv packages/*.deb ${{ github.workspace }}/ytmusicult.deb
         env:
