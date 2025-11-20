@@ -106,8 +106,7 @@ jobs:
       - name: Get YTMusicUltimate Version
         run: |
           cd YTMusicUltimate
-          VERSION=$(grep -E '^PACKAGE_VERSION' Makefile | cut -d '=' -f2 | tr -d ' ')
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "YTMUSICULT_VERSION=$(grep -E '^PACKAGE_VERSION' Makefile | cut -d '=' -f2 | tr -d ' ')" >> $GITHUB_ENV
           echo -e 'Done!'
 
       - name: Clone YouTubeHeader
