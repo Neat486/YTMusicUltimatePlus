@@ -134,7 +134,7 @@ jobs:
           cd YTMusicUltimate
           sed -i '' -e 's/16.5/17.5/g' Makefile
           sed -i '' -e 's/YouTubeMusic/YouTube Music/g' Makefile
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          make clean package DEBUG=0 FINALPACKAGE=1 ROOTLESS=1 SIDELOADING=1
           mv packages/*.deb ${{ github.workspace }}/ytmusicult.deb
         env:
           THEOS: ${{ github.workspace }}/theos
